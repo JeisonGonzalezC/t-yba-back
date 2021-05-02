@@ -1,0 +1,158 @@
+{
+	"info": {
+		"_postman_id": "4370703b-d4ac-4e99-8601-c3abfbd1b0c5",
+		"name": "Tyba",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"first2@gmail.com\",\n    \"password\": \"12345\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3004/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3004",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"First2\",\n    \"email\": \"first2@gmail.com\",\n    \"password\": \"12345\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3004/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3004",
+					"path": [
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Logout",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjhmYmRjMDg2LTVlZWEtNDc4OS04NzBhLTJjZTRiNzdmNzljNSIsIm5hbWUiOiJGaXJzdDIiLCJpYXQiOjE2MTk5NzQ3MTh9.WSUE2DJDCRejs4ZEabcsIJEMuTS3vXrz4JiuR-z1v2U",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3004/auth/logout",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3004",
+					"path": [
+						"auth",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get restaurants",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjhmYmRjMDg2LTVlZWEtNDc4OS04NzBhLTJjZTRiNzdmNzljNSIsIm5hbWUiOiJGaXJzdDIiLCJpYXQiOjE2MTk5NzQ3MzJ9.50W80n9JXFA5aW_gwnbsgEbY9V9V4MEli4D2KCfyZtU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3004/restaurant/5.0628828710255975/-75.50510151530874/10000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3004",
+					"path": [
+						"restaurant",
+						"5.0628828710255975",
+						"-75.50510151530874",
+						"10000"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Transactions",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjhmYmRjMDg2LTVlZWEtNDc4OS04NzBhLTJjZTRiNzdmNzljNSIsIm5hbWUiOiJGaXJzdDIiLCJpYXQiOjE2MTk5NzQ3MzJ9.50W80n9JXFA5aW_gwnbsgEbY9V9V4MEli4D2KCfyZtU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3004/restaurant",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3004",
+					"path": [
+						"restaurant"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
